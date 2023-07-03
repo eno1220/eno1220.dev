@@ -36,7 +36,7 @@ export default function Home() {
           <Image
             borderRadius={'full'}
             boxSize={28}
-            src='eno1220.jpg'
+            src='eno1220.webp'
             alt='avatar'
           />
           <VStack spacing={3} align='left'>
