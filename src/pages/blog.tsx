@@ -1,4 +1,5 @@
 import { Container, Heading } from '@chakra-ui/react'
+
 import Header from '@/components/Header'
 
 const Blog = () => {

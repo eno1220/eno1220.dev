@@ -1,5 +1,6 @@
-import { Box, Button, Image, Link, Text } from '@chakra-ui/react'
 import NextLink from 'next/link'
+
+import { Box, Image, Link } from '@chakra-ui/react'
 
 const Header = () => {
   return (
