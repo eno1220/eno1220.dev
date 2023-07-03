@@ -6,7 +6,9 @@ import {
   Heading,
   Text,
   HStack,
+  Link,
 } from '@chakra-ui/react'
+import NextLink from 'next/link'
 
 import { SiTwitter, SiGithub, SiZenn } from 'react-icons/si'
 
@@ -15,7 +17,16 @@ import Articles from '@/components/Articles'
 import LinkButton from '@/components/LinkButton'
 import Profile from '@/components/Profile'
 
+import dayjs from 'dayjs'
+import utc from 'dayjs/plugin/utc'
+import timezone from 'dayjs/plugin/timezone'
+
+dayjs.extend(utc)
+dayjs.extend(timezone)
+dayjs.tz.setDefault('Asia/Tokyo')
+
 export default function Home() {
+  const year = dayjs().tz().year()
   return (
     <>
       <Container
@@ -92,7 +103,7 @@ export default function Home() {
         <Heading as='h2' size='lg' mt={8}>
           Contact
         </Heading>
-        <Text fontSize='md' mt={2} fontWeight='bold'>
+        <Text fontSize='md' mt={2} fontWeight='bold' color='gray.300'>
           eno1220 [at] this domain
         </Text>
         <Text fontSize='sm' color='gray.300' mt={2}>
@@ -104,6 +115,25 @@ export default function Home() {
         <Text fontSize='sm' color='gray.300' mt={2}>
           相互リンクを募集しています。お気軽にご連絡ください。
         </Text>
+        <Text fontSize='sm' color='gray.300' mt={6}>
+          View source code on
+          <Link href='https://github.com/eno1220/eno1220.dev' as={NextLink}>
+            <Text
+              as='span'
+              color='gray.400'
+              ml={1}
+              fontWeight='bold'
+              textDecoration='underline'
+            >
+              GitHub
+            </Text>
+          </Link>
+          .
+        </Text>
+        <Box height='1px' bg='whiteAlpha.200' my={4} />
+        <Box textAlign='left' fontSize='sm' color='gray.300'>
+          ©{year} eno1220
+        </Box>
       </Container>
     </>
   )
