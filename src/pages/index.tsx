@@ -1,14 +1,6 @@
 import Head from 'next/head'
 
-import {
-  Box,
-  Container,
-  Image,
-  HStack,
-  VStack,
-  Heading,
-  Text,
-} from '@chakra-ui/react'
+import { Box, Container, Image, VStack, Heading, Text } from '@chakra-ui/react'
 
 export default function Home() {
   return (
@@ -34,7 +26,7 @@ export default function Home() {
             alt='avatar'
           />
           <VStack spacing={4} align='left'>
-            <Heading as='h1' size='xl'>
+            <Heading as='h1' size='xl' fontFamily='lineSeedJP'>
               eno1220
             </Heading>
             <Text fontSize='md' color='gray.300'>

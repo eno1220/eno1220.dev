@@ -1,24 +1,33 @@
-import { Noto_Sans_JP } from 'next/font/google'
+import localfont from 'next/font/local'
 
-import { StyleFunctionProps, extendBaseTheme } from '@chakra-ui/react'
+import { extendBaseTheme } from '@chakra-ui/react'
 import {
   Button as ButtonTheme,
   Container as ContainerTheme,
   Heading as HeadingTheme,
   List as ListTheme,
 } from '@chakra-ui/theme/components'
-import { Style } from 'util'
 
-const notoSansJP = Noto_Sans_JP({
-  weight: ['400', '700', '800'],
-  style: 'normal',
+const lineSeedJP = localfont({
+  src: [
+    {
+      path: '/fonts/LineSeedJP_OTF_Rg.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '/fonts/LineSeedJP_OTF_Bd.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
   display: 'swap',
   preload: false,
 })
 
 const fonts = {
-  heading: notoSansJP.style.fontFamily,
-  body: notoSansJP.style.fontFamily,
+  heading: lineSeedJP.style.fontFamily,
+  body: lineSeedJP.style.fontFamily,
 }
 
 const theme = extendBaseTheme({
@@ -45,8 +54,8 @@ const theme = extendBaseTheme({
   styles: {
     global: () => ({
       body: {
-        bg: "#0E1117",
-        color: "#E5EDF2",
+        bg: '#0E1117',
+        color: '#E5EDF2',
       },
     }),
   },
