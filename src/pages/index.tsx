@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
 import { Box, Container, Image, VStack, Heading, Text } from '@chakra-ui/react'
+import Achievements from '@/components/Achievements'
 
 export default function Home() {
   return (
@@ -11,7 +12,14 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Container maxW='4xl' py={8}>
+      <Container
+        maxW='3xl'
+        py={8}
+        px={{
+          base: 4,
+          md: 2,
+        }}
+      >
         <Box
           display='flex'
           flexDirection='row'
@@ -36,6 +44,10 @@ export default function Home() {
             </Text>
           </VStack>
         </Box>
+        <Heading as='h2' size='lg' mt={8}>
+          Achievements
+        </Heading>
+        <Achievements />
       </Container>
     </>
   )
