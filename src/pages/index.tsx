@@ -14,6 +14,7 @@ import { SiTwitter, SiGithub, SiZenn, SiDiscord } from 'react-icons/si'
 
 import Achievements from '@/components/Achievements'
 import LinkButton from '@/components/LinkButton'
+import Profile from '@/components/Profile'
 
 export default function Home() {
   return (
@@ -82,6 +83,10 @@ export default function Home() {
             </HStack>
           </VStack>
         </Box>
+        <Heading as='h2' size='lg' mt={8}>
+          Profile
+        </Heading>
+        <Profile />
         <Heading as='h2' size='lg' mt={8}>
           Achievements
         </Heading>
