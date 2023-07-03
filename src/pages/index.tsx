@@ -1,3 +1,5 @@
+import NextLink from 'next/link'
+
 import {
   Box,
   Container,
@@ -8,18 +10,16 @@ import {
   HStack,
   Link,
 } from '@chakra-ui/react'
-import NextLink from 'next/link'
 
+import dayjs from 'dayjs'
+import timezone from 'dayjs/plugin/timezone'
+import utc from 'dayjs/plugin/utc'
 import { SiTwitter, SiGithub, SiZenn } from 'react-icons/si'
 
 import Achievements from '@/components/Achievements'
 import Articles from '@/components/Articles'
 import LinkButton from '@/components/LinkButton'
 import Profile from '@/components/Profile'
-
-import dayjs from 'dayjs'
-import utc from 'dayjs/plugin/utc'
-import timezone from 'dayjs/plugin/timezone'
 
 dayjs.extend(utc)
 dayjs.extend(timezone)
