@@ -1,18 +1,15 @@
 import {
-  Box,
-  Heading,
   Text,
   VStack,
-  Image,
   Grid,
   GridItem,
   UnorderedList,
   ListItem,
 } from '@chakra-ui/react'
-import { useEffect, useState } from 'react'
+
 import dayjs from 'dayjs'
-import utc from 'dayjs/plugin/utc'
 import timezone from 'dayjs/plugin/timezone'
+import utc from 'dayjs/plugin/utc'
 import 'dayjs/locale/ja'
 
 dayjs.extend(utc)

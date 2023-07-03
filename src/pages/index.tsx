@@ -10,12 +10,12 @@ import {
   HStack,
 } from '@chakra-ui/react'
 
-import { SiTwitter, SiGithub, SiZenn, SiDiscord } from 'react-icons/si'
+import { SiTwitter, SiGithub, SiZenn } from 'react-icons/si'
 
 import Achievements from '@/components/Achievements'
+import Articles from '@/components/Articles'
 import LinkButton from '@/components/LinkButton'
 import Profile from '@/components/Profile'
-import Articles from '@/components/Articles'
 
 export default function Home() {
   return (

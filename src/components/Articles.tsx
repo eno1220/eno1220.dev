@@ -1,4 +1,5 @@
 import { Grid, GridItem } from '@chakra-ui/react'
+
 import ArticleCard from '@/components/ArticleCard'
 
 const articles = [
@@ -28,8 +29,8 @@ const Articles = () => {
       }}
       mt={2}
     >
-      {articles.map((article) => (
-        <GridItem>
+      {articles.map((article, index) => (
+        <GridItem key={`${article.title}-${index}`}>
           <ArticleCard
             title={article.title}
             publishedAt={article.publishedAt}
