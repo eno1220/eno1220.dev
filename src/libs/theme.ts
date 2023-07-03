@@ -11,12 +11,12 @@ import {
 const lineSeedJP = localfont({
   src: [
     {
-      path: './fonts/LineSeedJP_OTF_Rg.woff2',
+      path: './fonts/LINESeedJP_OTF_Rg.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: './fonts/LineSeedJP_OTF_Bd.woff2',
+      path: './fonts/LINESeedJP_OTF_Bd.woff2',
       weight: '700',
       style: 'normal',
     },
