@@ -99,7 +99,7 @@ export default function Home() {
           eno1220 [at] this domain
         </Text>
         <Text fontSize='sm' color='gray.300' mt={2}>
-          TwitterやDiscordのDMでも受け付けています。
+          TwitterやDiscord（ユーザ名:eno1220）のDMでも受け付けています。
         </Text>
       </Container>
     </>
