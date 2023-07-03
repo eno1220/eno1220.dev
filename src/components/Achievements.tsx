@@ -23,7 +23,7 @@ const achievements = [
 
 const Achievements = () => {
   return (
-    <VStack spacing={1} mt={2}>
+    <VStack spacing={1} mt={2} width='100%' align='left'>
       {achievements.map((achievement, index) => (
         <div key={`${achievement.title}-${index}`}>
           <AchievementCard title={achievement.title} term={achievement.term} />
