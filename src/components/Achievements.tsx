@@ -24,11 +24,11 @@ const achievements = [
 const Achievements = () => {
   return (
     <VStack spacing={1} mt={2}>
-      {achievements.map((achievement) => (
-        <>
+      {achievements.map((achievement, index) => (
+        <div key={`${achievement.title}-${index}`}>
           <AchievementCard title={achievement.title} term={achievement.term} />
           <Box h='1.5px' w='100%' bg='whiteAlpha.200' />
-        </>
+        </div>
       ))}
     </VStack>
   )
