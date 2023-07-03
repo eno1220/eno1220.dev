@@ -1,7 +1,19 @@
 import Head from 'next/head'
 
-import { Box, Container, Image, VStack, Heading, Text } from '@chakra-ui/react'
+import {
+  Box,
+  Container,
+  Image,
+  VStack,
+  Heading,
+  Text,
+  HStack,
+} from '@chakra-ui/react'
+
+import { SiTwitter, SiGithub, SiZenn, SiDiscord } from 'react-icons/si'
+
 import Achievements from '@/components/Achievements'
+import LinkButton from '@/components/LinkButton'
 
 export default function Home() {
   return (
@@ -33,7 +45,7 @@ export default function Home() {
             src='eno1220.jpg'
             alt='avatar'
           />
-          <VStack spacing={4} align='left'>
+          <VStack spacing={3} align='left'>
             <Heading as='h1' size='xl' fontFamily='lineSeedJP'>
               eno1220
             </Heading>
@@ -42,6 +54,32 @@ export default function Home() {
               <br />
               ヨルシカや日向坂46が好きです。
             </Text>
+            <HStack spacing={4}>
+              <LinkButton
+                href='https://github.com/eno1220'
+                icon={<SiGithub />}
+                username='eno1220'
+                color='#E4EDF1'
+              />
+              <LinkButton
+                href='https://twitter.com/1220_eno'
+                icon={<SiTwitter />}
+                username='1220_eno'
+                color='#1DA1F2'
+              />
+              <LinkButton
+                href='https://zenn.dev/eno1220'
+                icon={<SiZenn />}
+                username='eno1220'
+                color='#3EA8FF'
+              />
+              <LinkButton
+                href='https://discord.gg/'
+                icon={<SiDiscord />}
+                username='eno1220'
+                color='#747AEF'
+              />
+            </HStack>
           </VStack>
         </Box>
         <Heading as='h2' size='lg' mt={8}>

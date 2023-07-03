@@ -1,4 +1,5 @@
 import { VStack, Box } from '@chakra-ui/react'
+
 import AchievementCard from './AchievementCard'
 
 const achievements = [
