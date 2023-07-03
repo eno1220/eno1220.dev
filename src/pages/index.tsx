@@ -86,6 +86,15 @@ export default function Home() {
           Achievements
         </Heading>
         <Achievements />
+        <Heading as='h2' size='lg' mt={8}>
+          Contact
+        </Heading>
+        <Text fontSize='md' mt={2} fontWeight='bold'>
+          eno1220 [at] this domain
+        </Text>
+        <Text fontSize='sm' color='gray.300' mt={2}>
+          TwitterやDiscordのDMでも受け付けています。
+        </Text>
       </Container>
     </>
   )
