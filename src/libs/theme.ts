@@ -1,12 +1,13 @@
 import { Noto_Sans_JP } from 'next/font/google'
 
-import { extendBaseTheme } from '@chakra-ui/react'
+import { StyleFunctionProps, extendBaseTheme } from '@chakra-ui/react'
 import {
   Button as ButtonTheme,
   Container as ContainerTheme,
   Heading as HeadingTheme,
   List as ListTheme,
 } from '@chakra-ui/theme/components'
+import { Style } from 'util'
 
 const notoSansJP = Noto_Sans_JP({
   weight: ['400', '700', '800'],
@@ -40,6 +41,14 @@ const theme = extendBaseTheme({
       '800': '#1e40af',
       '900': '#1e3a8a',
     },
+  },
+  styles: {
+    global: () => ({
+      body: {
+        bg: "#0E1117",
+        color: "#E5EDF2",
+      },
+    }),
   },
   fonts,
 })

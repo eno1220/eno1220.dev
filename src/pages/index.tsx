@@ -1,10 +1,14 @@
-import { Inter } from 'next/font/google'
 import Head from 'next/head'
-import Image from 'next/image'
 
-import styles from '@/styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import {
+  Box,
+  Container,
+  Image,
+  HStack,
+  VStack,
+  Heading,
+  Text,
+} from '@chakra-ui/react'
 
 export default function Home() {
   return (
@@ -15,101 +19,32 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              By{' '}
-              <Image
-                src='/vercel.svg'
-                alt='Vercel Logo'
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
-          </div>
-        </div>
-
-        <div className={styles.center}>
+      <Container maxW='4xl' py={8}>
+        <Box
+          display='flex'
+          flexDirection='row'
+          alignItems='center'
+          gap={8}
+          as='header'
+        >
           <Image
-            className={styles.logo}
-            src='/next.svg'
-            alt='Next.js Logo'
-            width={180}
-            height={37}
-            priority
+            borderRadius={'full'}
+            boxSize={28}
+            src='eno1220.jpg'
+            alt='avatar'
           />
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href='https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-            className={styles.card}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <h2>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href='https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-            className={styles.card}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <h2>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href='https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-            className={styles.card}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <h2>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href='https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-            className={styles.card}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <h2>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+          <VStack spacing={4} align='left'>
+            <Heading as='h1' size='xl'>
+              eno1220
+            </Heading>
+            <Text fontSize='md' color='gray.300'>
+              茨城県の中高一貫校に通う高校3年生です。webフロントエンドや低レイヤーなどに興味があります。
+              <br />
+              ヨルシカや日向坂46が好きです。
+            </Text>
+          </VStack>
+        </Box>
+      </Container>
     </>
   )
 }
