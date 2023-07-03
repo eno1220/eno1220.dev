@@ -98,6 +98,12 @@ export default function Home() {
         <Text fontSize='sm' color='gray.300' mt={2}>
           TwitterやDiscord（ユーザ名:eno1220）のDMでも受け付けています。
         </Text>
+        <Heading as='h2' size='lg' mt={8}>
+          Link Exchange
+        </Heading>
+        <Text fontSize='sm' color='gray.300' mt={2}>
+          相互リンクを募集しています。お気軽にご連絡ください。
+        </Text>
       </Container>
     </>
   )
