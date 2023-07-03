@@ -55,7 +55,13 @@ export default function Home() {
               <br />
               ヨルシカや日向坂46が好きです。
             </Text>
-            <HStack spacing={4}>
+            <HStack
+              spacing={{
+                base: 2,
+                md: 4,
+              }}
+              wrap='wrap'
+            >
               <LinkButton
                 href='https://github.com/eno1220'
                 icon={<SiGithub />}
@@ -74,15 +80,10 @@ export default function Home() {
                 username='eno1220'
                 color='#3EA8FF'
               />
-              <LinkButton
-                href='https://discord.gg/'
-                icon={<SiDiscord />}
-                username='eno1220'
-                color='#747AEF'
-              />
             </HStack>
           </VStack>
         </Box>
+        <Box height='1px' bg='whiteAlpha.200' my={8} />
         <Heading as='h2' size='lg' mt={8}>
           Profile
         </Heading>
