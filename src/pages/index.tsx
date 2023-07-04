@@ -115,6 +115,7 @@ export default function Home() {
         <Text fontSize='sm' color='gray.300' mt={2}>
           相互リンクを募集しています。お気軽にご連絡ください。
         </Text>
+        <Box height='1px' bg='whiteAlpha.200' my={4} />
         <Text fontSize='sm' color='gray.300' mt={6}>
           View source code on
           <Link href='https://github.com/eno1220/eno1220.dev' as={NextLink}>
@@ -130,10 +131,9 @@ export default function Home() {
           </Link>
           .
         </Text>
-        <Box height='1px' bg='whiteAlpha.200' my={4} />
-        <Box textAlign='left' fontSize='sm' color='gray.300'>
+        <Text textAlign='left' fontSize='sm' color='gray.300' mt={1}>
           ©{year} eno1220
-        </Box>
+        </Text>
       </Container>
     </>
   )
