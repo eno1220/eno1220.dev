@@ -34,7 +34,13 @@ const theme = extendBaseTheme({
   components: {
     Button: ButtonTheme,
     Container: ContainerTheme,
-    Heading: HeadingTheme,
+    Heading: {
+      ...HeadingTheme,
+      baseStyle: {
+        ...HeadingTheme.baseStyle,
+        color: '#E5EDF2',
+      }
+    },
     List: ListTheme,
   },
   colors: {
@@ -55,7 +61,7 @@ const theme = extendBaseTheme({
     global: () => ({
       body: {
         bg: '#0E1117',
-        color: '#E5EDF2',
+        color: 'gray.300',
       },
     }),
   },
