@@ -32,7 +32,7 @@ const ArticleCard = ({
           bg: 'whiteAlpha.300',
         }}
       >
-        <Text fontSize='md' fontWeight='bold' color='gray.300'>
+        <Text fontSize='md' fontWeight='bold'>
           {title}
         </Text>
         <HStack spacing={2} fontSize='sm' color='gray.400' mt='auto'>

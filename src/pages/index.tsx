@@ -54,7 +54,7 @@ export default function Home() {
             <Heading as='h1' size='xl'>
               eno1220
             </Heading>
-            <Text fontSize='md' color='gray.300'>
+            <Text fontSize='md'>
               茨城県の中高一貫校に通う高校3年生です。webフロントエンドや低レイヤーなどに興味があります。
               <br />
               ヨルシカや日向坂46が好きです。
@@ -103,20 +103,20 @@ export default function Home() {
         <Heading as='h2' size='lg' mt={8}>
           Contact
         </Heading>
-        <Text fontSize='md' mt={2} fontWeight='bold' color='gray.300'>
+        <Text fontSize='md' mt={2} fontWeight='bold'>
           eno1220 [at] this domain
         </Text>
-        <Text fontSize='sm' color='gray.300' mt={2}>
+        <Text fontSize='sm' mt={2}>
           TwitterやDiscord（ユーザ名:eno1220）のDMでも受け付けています。
         </Text>
         <Heading as='h2' size='lg' mt={8}>
           Link Exchange
         </Heading>
-        <Text fontSize='sm' color='gray.300' mt={2}>
+        <Text fontSize='sm' mt={2}>
           相互リンクを募集しています。お気軽にご連絡ください。
         </Text>
         <Box height='1px' bg='whiteAlpha.200' my={4} />
-        <Text fontSize='sm' color='gray.300' mt={6}>
+        <Text fontSize='sm' mt={6}>
           View source code on
           <Link href='https://github.com/eno1220/eno1220.dev' as={NextLink}>
             <Text
@@ -131,7 +131,7 @@ export default function Home() {
           </Link>
           .
         </Text>
-        <Text textAlign='left' fontSize='sm' color='gray.300' mt={1}>
+        <Text textAlign='left' fontSize='sm' mt={1}>
           ©{year} eno1220
         </Text>
       </Container>
