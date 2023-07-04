@@ -1,10 +1,10 @@
 import NextLink from 'next/link'
 
-import { Box, HStack, Text } from '@chakra-ui/react'
+import { Box, HStack, Text, Image } from '@chakra-ui/react'
 
 import dayjs from 'dayjs'
 
-import { getSiteName } from '@/libs/utils'
+import { getSiteName, getSiteIcon } from '@/libs/utils'
 
 const ArticleCard = ({
   title,
@@ -36,6 +36,12 @@ const ArticleCard = ({
           {title}
         </Text>
         <HStack spacing={2} fontSize='sm' color='gray.400' mt='auto'>
+          <Image
+            src={getSiteIcon(href)}
+            boxSize={4}
+            rounded='sm'
+            alt={`{getSiteName(href)}-icon`}
+          />
           <Text>{getSiteName(href)}</Text>
           <Text>{dayjs(publishedAt).format('YYYY/MM/DD')}</Text>
         </HStack>
