@@ -33,3 +33,21 @@ https://example.com
 ###### h6
 
 > hoge
+
+```ts
+const rehypePrettyCode = require('rehype-pretty-code')
+const fs = require('fs')
+
+/** @type {import('rehype-pretty-code').Options} */
+const options = {
+  // See Options section below.
+}
+
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [[rehypePrettyCode, options]],
+  },
+})
+```

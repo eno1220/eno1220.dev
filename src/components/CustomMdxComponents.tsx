@@ -52,6 +52,24 @@ const CustomMdxComponents = {
   ul: (props: JSX.IntrinsicElements['ul']) => (
     <UnorderedList my={2} ml={4} {...props} />
   ),
+  pre: (props: JSX.IntrinsicElements['pre']) => {
+    const child = props.children as JSX.Element
+    if (child?.type === 'code') {
+      return (
+        <chakra.pre
+          overflowX='scroll'
+          backgroundColor='whiteAlpha.100'
+          rounded='md'
+          p={4}
+          my={2}
+          fontSize='0.9rem'
+          {...props}
+        />
+      )
+    }
+    return <chakra.pre {...props} />
+  },
+
   //todo: hr Image
 }
 
