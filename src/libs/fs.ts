@@ -15,3 +15,9 @@ export const getSlugs = (path: string) => {
     .flat()
   return slugs
 }
+
+export const getPostBySlug = (path: string, slug: string) => {
+  const fullPath = join(process.cwd(), 'src', path, `${slug}.md`)
+  const content = fs.readFileSync(fullPath, 'utf8')
+  return content
+}

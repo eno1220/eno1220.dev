@@ -1,9 +1,11 @@
 import type { GetStaticPaths } from 'next'
+import { MDXRemote } from 'next-mdx-remote'
 
-import { getSlugs } from '@/libs/fs'
+import { getSlugs, getPostBySlug } from '@/libs/fs'
+import { mdToHtml } from '@/libs/mdx'
 
-const BlogPage = ({ slug }: { slug: string }) => {
-  return <div>{slug}</div>
+const BlogPage = ({ mdxSource }: { mdxSource: any }) => {
+  return <MDXRemote {...mdxSource} />
 }
 
 export default BlogPage
@@ -14,9 +16,11 @@ export const getStaticProps = async ({
   params: { slug: string }
 }) => {
   const slug = params.slug
+  const content = getPostBySlug('articles/blog', slug)
+  const mdxSource = await mdToHtml(content)
   return {
     props: {
-      slug,
+      mdxSource,
     },
   }
 }
