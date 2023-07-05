@@ -39,7 +39,7 @@ const theme = extendBaseTheme({
       baseStyle: {
         ...HeadingTheme.baseStyle,
         color: '#E5EDF2',
-      }
+      },
     },
     List: ListTheme,
   },
