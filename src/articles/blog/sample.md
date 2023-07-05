@@ -1,6 +1,6 @@
 ---
 slug: 'sample'
-title: 'サンプル'
+title: '文化祭のIT化を進めた話'
 date: '20230705'
 description: 'ブログのテスト'
 tags: ['next.js', 'react']

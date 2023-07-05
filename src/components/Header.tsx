@@ -8,7 +8,7 @@ const Header = () => {
       <Image
         borderRadius={'full'}
         boxSize={8}
-        src='eno1220.webp'
+        src='/eno1220.webp'
         alt='avatar'
       />
       <Link fontSize='xl' ml={4} fontWeight='bold' href='/' as={NextLink}>
