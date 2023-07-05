@@ -8,6 +8,9 @@ import {
   chakra,
 } from '@chakra-ui/react'
 
+import type { NextImageProps } from './NextImage'
+import NextImage from './NextImage'
+
 const CustomMdxComponents = {
   h1: (props: JSX.IntrinsicElements['h1']) => (
     <Heading as='h1' mt={8} mb={4} size='2xl' {...props} />
@@ -29,9 +32,9 @@ const CustomMdxComponents = {
   ),
   a: (props: JSX.IntrinsicElements['a']) => {
     const { href, ...rest } = props
-    const isInernalLink = href && (href.startsWith('/') || href.startsWith('#'))
+    const isInernalLink = href && href.startsWith('#')
     if (isInernalLink) {
-      return <Link as={NextLink} href={href} {...rest} color='blue.500' />
+      return <Link as={NextLink} href={href} {...rest} />
     }
     return <Link href={href} color='blue.500' isExternal {...rest} />
   },
@@ -68,6 +71,9 @@ const CustomMdxComponents = {
       )
     }
     return <chakra.pre {...props} />
+  },
+  img: (props: JSX.IntrinsicElements['img']) => {
+    return <NextImage {...(props as NextImageProps)} />
   },
 
   //todo: hr Image
