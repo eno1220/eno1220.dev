@@ -1,11 +1,12 @@
 import type { GetStaticPaths } from 'next'
 import { MDXRemote } from 'next-mdx-remote'
 
+import CustomMdxComponents from '@/components/CustomMdxComponents'
 import { getSlugs, getPostBySlug } from '@/libs/fs'
 import { mdToHtml } from '@/libs/mdx'
 
 const BlogPage = ({ mdxSource }: { mdxSource: any }) => {
-  return <MDXRemote {...mdxSource} />
+  return <MDXRemote {...mdxSource} components={CustomMdxComponents} />
 }
 
 export default BlogPage
