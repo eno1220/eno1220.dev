@@ -8,6 +8,8 @@ import remarkGemoji from 'remark-gemoji'
 import remarkGfm from 'remark-gfm'
 import remarkUnwrapImages from 'remark-unwrap-images'
 
+import rehypeImageSize from './imageSize'
+
 export const mdToHtml = async (content: string) => {
   const result = await serialize(content, {
     parseFrontmatter: true,
@@ -32,6 +34,7 @@ export const mdToHtml = async (content: string) => {
             behavior: 'wrap',
           },
         ],
+        rehypeImageSize,
       ],
     },
   })
