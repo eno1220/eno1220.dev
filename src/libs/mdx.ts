@@ -9,12 +9,18 @@ import remarkGfm from 'remark-gfm'
 import remarkUnwrapImages from 'remark-unwrap-images'
 
 import rehypeImageSize from './imageSize'
+import { remarkLinkCard, handler } from './linkCard'
 
 export const mdToHtml = async (content: string) => {
   const result = await serialize(content, {
     parseFrontmatter: true,
     mdxOptions: {
-      remarkPlugins: [remarkGemoji, remarkGfm, remarkUnwrapImages],
+      remarkPlugins: [
+        remarkGemoji,
+        remarkGfm,
+        remarkUnwrapImages,
+        remarkLinkCard as any,
+      ],
       rehypePlugins: [
         [
           rehypePrettyCode,
@@ -36,6 +42,11 @@ export const mdToHtml = async (content: string) => {
         ],
         rehypeImageSize,
       ],
+      remarkRehypeOptions: {
+        handlers: {
+          extlink: handler as any,
+        },
+      },
     },
   })
 

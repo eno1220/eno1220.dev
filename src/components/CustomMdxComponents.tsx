@@ -1,11 +1,15 @@
 import NextLink from 'next/link'
 
 import {
+  Text,
   Heading,
   Link,
   OrderedList,
   UnorderedList,
   chakra,
+  HStack,
+  Image,
+  Box,
 } from '@chakra-ui/react'
 
 import type { NextImageProps } from './NextImage'
@@ -75,7 +79,89 @@ const CustomMdxComponents = {
   img: (props: JSX.IntrinsicElements['img']) => {
     return <NextImage {...(props as NextImageProps)} />
   },
-
+  extlink: (props: any) => {
+    const { url, title, description, image, icon } = props
+    return (
+      <Link
+        display='flex'
+        flexDirection='row'
+        my={4}
+        bg='whiteAlpha.100'
+        rounded='md'
+        w='100%'
+        h={28}
+        border='1px solid'
+        borderColor='whiteAlpha.200'
+        as={NextLink}
+        href={url}
+        isExternal
+        transition='all 0.2s'
+        _hover={{
+          bg: 'whiteAlpha.200',
+          borderColor: 'whiteAlpha.300',
+        }}
+      >
+        <Box
+          display='flex'
+          flexDirection='column'
+          w='100%'
+          h='100%'
+          pl={4}
+          py={4}
+          flex='1'
+          overflow='hidden'
+        >
+          <Text
+            fontSize='0.95rem'
+            fontWeight='bold'
+            overflow='hidden'
+            textOverflow='ellipsis'
+            whiteSpace='nowrap'
+            mr={2}
+          >
+            {title}
+          </Text>
+          <Text
+            mt={1}
+            fontSize='0.85rem'
+            color='gray.400'
+            overflow='hidden'
+            textOverflow='ellipsis'
+            whiteSpace='nowrap'
+            mr={2}
+          >
+            {description}
+          </Text>
+          <HStack mt='auto' spacing={1}>
+            {icon && (
+              <Image src={icon} alt={title} width={4} height={4} mr={2} />
+            )}
+            <Text
+              fontSize='0.85rem'
+              color='gray.400'
+              overflow='hidden'
+              textOverflow='ellipsis'
+              whiteSpace='nowrap'
+              mr={2}
+            >
+              {url}
+            </Text>
+          </HStack>
+        </Box>
+        <Box>
+          {image && (
+            <Image
+              src={image}
+              alt={title}
+              height='100%'
+              objectFit='cover'
+              ml={4}
+            />
+          )}
+        </Box>
+      </Link>
+    )
+  },
   //todo: hr Image
 }
 
