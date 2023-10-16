@@ -27,6 +27,9 @@ const LinkButton = ({
       _hover={{
         opacity: 0.75,
       }}
+      _active={{
+        opacity: 0.5,
+      }}
     >
       {username}
     </Button>

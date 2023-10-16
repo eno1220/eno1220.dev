@@ -33,7 +33,7 @@ const ProfileCard = ({
       gap={4}
     >
       <GridItem>
-        <Text fontSize='md' color='gray.300' fontWeight='bold'>
+        <Text fontSize='md' fontWeight='bold'>
           {title}
         </Text>
       </GridItem>
@@ -48,27 +48,21 @@ const Profile = () => {
     <>
       <VStack spacing={1} align='left' mt={2}>
         <ProfileCard title='名前'>
-          <Text fontSize='md' color='gray.300'>
-            eno1220
-          </Text>
+          <Text>eno1220</Text>
         </ProfileCard>
         <ProfileCard title='年齢'>
-          <Text fontSize='md' color='gray.300'>
-            {age}歳 （2005年12月20日生まれ）
-          </Text>
+          <Text>{age}歳 （2005年12月20日生まれ）</Text>
         </ProfileCard>
         <ProfileCard title='学年'>
-          <Text fontSize='md' color='gray.300'>
-            高校3年生
-          </Text>
+          <Text>高校3年生</Text>
         </ProfileCard>
         <ProfileCard title='興味'>
-          <UnorderedList fontSize='md' color='gray.300' spacing={1}>
+          <UnorderedList spacing={1}>
             <ListItem>webフロントエンド</ListItem>
             <ListItem>競技プログラミング</ListItem>
             <ListItem>
               低レイヤー
-              <UnorderedList fontSize='md' color='gray.300' spacing={1} mt={1}>
+              <UnorderedList spacing={1} mt={1}>
                 <ListItem>OS</ListItem>
                 <ListItem>コンパイラ</ListItem>
               </UnorderedList>
@@ -76,12 +70,10 @@ const Profile = () => {
           </UnorderedList>
         </ProfileCard>
         <ProfileCard title='エディタ'>
-          <Text fontSize='md' color='gray.300'>
-            VSCode
-          </Text>
+          <Text fontSize='md'>VSCode</Text>
         </ProfileCard>
         <ProfileCard title='言語'>
-          <UnorderedList fontSize='md' color='gray.300' spacing={1}>
+          <UnorderedList spacing={1}>
             <ListItem>日本語</ListItem>
             <ListItem>JavaScript</ListItem>
             <ListItem>TypeScript</ListItem>
@@ -91,7 +83,7 @@ const Profile = () => {
           </UnorderedList>
         </ProfileCard>
         <ProfileCard title='好き'>
-          <UnorderedList fontSize='md' color='gray.300' spacing={1}>
+          <UnorderedList spacing={1}>
             <ListItem>日向坂46</ListItem>
             <ListItem>ヨルシカ</ListItem>
           </UnorderedList>
