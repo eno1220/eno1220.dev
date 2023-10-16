@@ -101,15 +101,6 @@ export default function Home() {
         </Heading>
         <Achievements />
         <Heading as='h2' size='lg' mt={8}>
-          Contact
-        </Heading>
-        <Text fontSize='md' mt={2} fontWeight='bold'>
-          eno1220 [at] this domain
-        </Text>
-        <Text fontSize='sm' mt={2}>
-          TwitterやDiscord（ユーザ名:eno1220）のDMでも受け付けています。
-        </Text>
-        <Heading as='h2' size='lg' mt={8}>
           Link Exchange
         </Heading>
         <Text fontSize='sm' mt={2}>

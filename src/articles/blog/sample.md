@@ -8,7 +8,7 @@ tags: ['next.js', 'react']
 
 ## 見出し
 
-[リンク](https://example.com)を参照。
+[リンク](https://example.com)を参照。[^1]
 
 https://zenn.dev/eno1220/articles/cfa73151086ad9
 
@@ -18,7 +18,7 @@ https://github.com/keyaki-fes/Festival-Monitor
 - 2
 - 3
 
-![avatar](/images/eno1220.webp)
+![avatar](/images/eno1220.webp =250x)
 
 ## h2
 
@@ -57,3 +57,5 @@ const withMDX = require('@next/mdx')({
 [h2](#2)
 
 :tada:
+
+[^1]: 脚注

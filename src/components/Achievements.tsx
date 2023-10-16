@@ -5,11 +5,7 @@ import AchievementCard from './AchievementCard'
 const achievements = [
   {
     title: 'セキュリティ・キャンプ全国大会2023 Y1トラック（OS自作ゼミ）',
-    term: '2023/06 -',
-  },
-  {
-    title: '国立情報学研究所「情報科学の達人」 4期生',
-    term: '2023/04 -',
+    term: '2023/08',
   },
   {
     title: '情報オリンピック（JOI）2022/23 本選出場',
